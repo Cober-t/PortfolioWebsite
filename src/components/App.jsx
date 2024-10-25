@@ -16,8 +16,15 @@ export default function App() {
     return (
         <>
         <AnimatePresence mode="wait">
+            <Header />
+            <div className='flex flex-col w-full h-full gap-y-28'>
+                <Home />
+                <Experience />
+                <Projects />
+                <Contact />
+            </div>
 
-            <Routes location={location} key={location.pathname}>
+            {/* <Routes location={location} key={location.pathname}>
                 <Route path="/" exact element={
                     <>
 			        <Header />
@@ -42,7 +49,7 @@ export default function App() {
                     <Contact/>
                     </>
                 } />
-            </Routes>
+            </Routes> */}
         </AnimatePresence>
         </>
     )

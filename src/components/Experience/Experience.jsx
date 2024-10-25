@@ -20,7 +20,7 @@ const Experience = () => {
             <motion.div 
             initial={{opacity:0}}
             animate={{opacity:1, transition:{delay:0.4, duration:0.4, ease:"easeIn"}}}
-            className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 xl:px-24">
+            className="flex h-full items-center justify-center py-12 xl:py-0 xl:px-24">
 
                 <div className="container mx-auto flex flex-col xl:flex-row gap-[60px]">
                     <div className="flex flex-col w-full max-w-[380px] mx-auto">
@@ -37,7 +37,7 @@ const Experience = () => {
                     </div>
 
                     {/* content */}
-                    <div className="min-h-[70vh] w-full">
+                    <div className="h-full w-full">
                         { 
                         currentTab === 0 && <ExperienceWork /> ||
 
