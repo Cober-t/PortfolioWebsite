@@ -5,16 +5,26 @@ import "swiper/css"
 
 const Skills = () => {
 
+    function skillLevelColored(level)
+    {
+        if (level.toLowerCase() == "principiante")
+            return "opacity-30"
+        else if (level.toLowerCase() == "intermedio")
+            return "opacity-50"
+        else 
+            return "opacity-75"
+    }
+
     return (
         <div className="w-full h-full">
         <div className="flex flex-col gap-[20px]">
 
             <p className="font-title transition-all
-            flex text-4xl font-medium uppercase justify-center select-none">
+            flex text-4xl font-medium uppercase justify-center">
                 Lenguajes
             </p>
             <Swiper spaceBetween={10} slidesPerView={4}
-            className="h-[200px] xl:w-[1000px] w-full select-none">
+            className="h-[200px] xl:w-[1000px] w-full">
                 {skills.languages.map((skill, index) => {
                     return <SwiperSlide key={index} className="w-full">
                     <div className="w-full h-[150px] bg-[#232329] flex
@@ -24,8 +34,8 @@ const Skills = () => {
                             {skill.icon}
                         </div>
                         <p className="text-[13px] sm:text-[16px] font-medium uppercase">{skill.name}</p>
-                        <p className="font-light tracking-wider opacity-60 hover:opacity-100
-                        text-[10px] sm:text-xs uppercase text-accent">
+                        <p className={`font-light tracking-wider text-[10px] sm:text-xs text-accent uppercase
+                         hover:opacity-100 ${skillLevelColored(skill.level)}`}>
                             {skill.level}
                         </p>
                     </div>
@@ -40,11 +50,11 @@ const Skills = () => {
             </Swiper>
 
             <p className="font-title transition-all
-            flex text-4xl font-medium uppercase justify-center select-none">
+            flex text-4xl font-medium uppercase justify-center">
                 Frameworks
             </p>
             <Swiper spaceBetween={10} slidesPerView={3}
-            className="h-[200px] xl:w-[1000px] w-full select-none">
+            className="h-[200px] xl:w-[1000px] w-full">
                 {skills.frameworks.map((skill, index) => {
                     return <SwiperSlide key={index} className="w-full">
                     <div className="w-full h-[150px] bg-[#232329] flex
@@ -54,8 +64,8 @@ const Skills = () => {
                             {skill.icon}
                         </div>
                         <p className="text-[13px] sm:text-[16px] font-medium uppercase">{skill.name}</p>
-                        <p className="font-light tracking-wider opacity-60 hover:opacity-100
-                        text-[10px] sm:text-xs uppercase text-accent">
+                        <p className={`font-light tracking-wider text-[10px] sm:text-xs text-accent uppercase
+                         hover:opacity-100 ${skillLevelColored(skill.level)}`}>
                             {skill.level}
                         </p>
                     </div>
@@ -70,11 +80,11 @@ const Skills = () => {
             </Swiper>
 
             <p className="font-title transition-all
-            flex text-4xl font-medium uppercase justify-center select-none">
+            flex text-4xl font-medium uppercase justify-center">
                 Programas
             </p>
             <Swiper spaceBetween={10} slidesPerView={4}
-            className="h-[200px] xl:w-[1000px] w-full select-none">
+            className="h-[200px] xl:w-[1000px] w-full">
                 {skills.softwares.map((skill, index) => {
                     return <SwiperSlide key={index} className="w-full">
                     <div className="ww-full h-[150px] bg-[#232329] flex
@@ -84,8 +94,8 @@ const Skills = () => {
                             {skill.icon}
                         </div>
                         <p className="text-[13px] sm:text-[16px] font-medium uppercase">{skill.name}</p>
-                        <p className="font-light tracking-wider opacity-60 hover:opacity-100
-                        text-[10px] sm:text-xs uppercase text-accent">
+                        <p className={`font-light tracking-wider text-[10px] sm:text-xs text-accent uppercase
+                         hover:opacity-100 ${skillLevelColored(skill.level)}`}>
                             {skill.level}
                         </p>
                     </div>

@@ -13,10 +13,9 @@ const ExperienceWork = () => {
                         {experience.items.map((item, index) => {
                             return (
                                 <li key={index}
-                                className={`bg-[#232329] h-fit xl:h-[220px] py-6 px-10 flex flex-col 
+                                className={`bg-[#232329] h-fit xl:h-[220px] py-6 px-10 flex flex-col
                                 justify-center items-center lg:items-start gap-1 bg-bottom xl:bg-right bg-contain bg-no-repeat`}>
-                                    <div 
-                                    className="w-full flex xl:flex-row flex-col items-center justify-center sm:justify-between">
+                                    <div className="w-full flex xl:flex-row flex-col items-center justify-center sm:justify-between">
                                         <div>
                                             <span className="text-accent font-tags text-2xl font-medium">
                                                     {item.duration}
@@ -29,6 +28,10 @@ const ExperienceWork = () => {
                                                 <span className="w-[6px] h-[6px] bg-accent" />
                                                 <p className="text-white/60 font-medium">{item.company}</p>
                                             </div>
+                                        </div>
+                                        <div className="sm:max-w-[70%] xl:max-w-[50%] min-w-[225px] text-pretty
+                                        text-white/60 mb-5 xl:ml-10 xl:mb-0 font-medium xl:text-xs text-sm">
+                                            {item.descriptionEN}
                                         </div>
                                         {
                                             item.image !== undefined && 

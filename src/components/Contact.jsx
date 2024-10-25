@@ -58,20 +58,26 @@ const Contact = () => {
 		<MotionTranstion />
 		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden mt-24`}>
 
-			<h3 className={`text-6xl xl:text-8xl font-tags flex flex-col items-center select-none`}>
+			<h3 className={`text-6xl xl:text-8xl font-tags flex flex-col items-center mb-3`}>
 				CONTACTAME
 			</h3>
-			<p className="flex text-accent justify-center mb-10 font-medium text-md">
+			<p className="flex text-white/60 justify-center font-medium text-md mb-3">
 				jorgetejadolopez@gmail.com
 			</p>
+			<a href="https://www.linkedin.com/in/jorge-tejado-l%C3%B3pez/" 
+			className={`flex text-white/60 hover:text-accent underline xl:text-xl 
+			capitalize font-medium text-sm justify-center mb-3`}>
+				LinkedIn
+			</a>
 
 
-			<form
-				ref={formRef}
-				onSubmit={handleSubmit}
-				className="mb-10 text-white/50"
-			>
+			<div className="mb-10"/>
+
+			<form ref={formRef} onSubmit={handleSubmit} className="mb-10 text-white/50">
 				<label className="flex flex-col mb-10 xl:ml-10 xl:translate-x-[30vw]">
+					<p className="text-white/60 text-md font-regular mb-3 white">
+						{`Rellena el formulario y te contestare lo antes posible:`}
+					</p>
 					<div className="h-[3rem] w-0.5 bg-white/50 ">
 						<input 
 							type="text" 
@@ -116,7 +122,7 @@ const Contact = () => {
 						className="py-3 px-8 bg-[#38383e] opacity-45 hover:opacity-85
 						outline-none w-fit text-white/80 font-homeSections font-medium"
 					>
-						{loading ? 'Sending...' : 'Send'}
+						{loading ? 'Enviando...' : 'Enviar'}
 					</button>
 				</div>
 

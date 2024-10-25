@@ -51,7 +51,7 @@ const Projects = () => {
                  container mx-auto">
                     {projectsName.map((projectNode, index)=> {
                         return (
-                            <div className="w-full items-center justify-center select-none text-nowrap"
+                            <div className="w-full items-center justify-center text-nowrap"
                             onClick={() => {slideTo(0); setProgress(100/projects[index].length)}}>
                                 <p className={`border-white/20 font-tags tracking-wider text-[26px] xl:text-[32px] font-light
                                 uppercase pt-2.5 pb-2.5 justify-center flex transition-all
@@ -65,7 +65,7 @@ const Projects = () => {
                     })}
                 </div>
 
-                <div className="container mx-auto select-none pt-5 xl:pr-5 xl:pl-5">
+                <div className="container mx-auto pt-5 xl:pr-5 xl:pl-5">
                     <div className="flex flex-col xl:flex-row xl:gap-[30px]">
                         <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col
                         xl:justify-between order-2 xl:order-none">

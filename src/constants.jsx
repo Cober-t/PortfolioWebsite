@@ -12,7 +12,7 @@ import downloadCV from "$iconsAndCV/alicia.pdf"
 
 const links = [
     {
-        name:"inicio",
+        name:"Inicio",
         path: "/",
     },
     {
@@ -20,7 +20,7 @@ const links = [
         path: "/experience",
     },
     {
-        name:"Proyectos",
+        name:"Proyectos Personales",
         path: "/projects",
     },
     {
@@ -35,20 +35,20 @@ import { BiConversation } from "react-icons/bi"
 const projects = [
     [
         {
-            num: '00',
+            num: '1/8',
             title: "Core",
             description: "A la hora de comenzar un proyecto como es la programación de un motor de videojuegos \
             existen una serie de características fundamentales que debemos tener en cuenta, \
             y que facilitan la creación de cualquier tipo de juego. A continuación, explicaré \
             su desarrollo apoyándome en proyectos terminados.\
             A continuación explico el desarrollo de dichas características a través de proyectos terminados.",
-            stack: [{name: "C++"}],
+            stack: [{name: "C++"}, {name: "Multithreading"}, {name: "OpenGL"}],
             image: "/myGameEngine/coreCode.png",
             icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '01',
+            num: '2/8',
             title: "Configuración del proyecto y API para la ventana",
             description: "Un conocimiento sólido en configuración de proyectos \
             facilitará enormemente añadir librerías y la correcta compilación en \
@@ -61,7 +61,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '02',
+            num: '3/8',
             title: "Sistema de 'logging'",
             description: "Imprescindible para comprobar si el funcionamiento es correcto \
             y poder ver la respuesta de eventos y de nuestras interacciones con el motor. \
@@ -72,7 +72,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '03',
+            num: '4/8',
             title: "Editor",
             description: "Un editor visual para el motor supone una drástica mejora, permitiendo \
             la creación de herramientas que aceleran y facilitan el desarrollo de videjuegos.",
@@ -82,7 +82,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '04',
+            num: '5/8',
             title: "API para los gráficos",
             description: "Al igual que sucede con la ventana, es importante crear una capa que nos permita \
             mostrar gráficos en ella. Cada sistema operativo gestiona los gráficos de diferente forma, pero el motor \
@@ -94,7 +94,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '05',
+            num: '6/8',
             title: "Escena de juego y Sistema de Entidades",
             description: "A la hora de diseñar la manera en la que el motor va a gestionar los elementos del juego \
             se ha optado por un sistema de entidades. Todo elemento en el juego (entidad) va a tener una lista \
@@ -107,7 +107,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '06',
+            num: '7/8',
             title: "Scripting nativo",
             description: "Gracias a una correcta configuración del proyecto y a las librerías dinámicas, con este sistema \
             podremos programar la lógica del videojuego sin tener que recompilar todo el motor, pudiendo hacer \
@@ -119,7 +119,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '07',
+            num: '8/8',
             title: "Launcher para el motor y proyectos",
             description: "Al igual que otros populares motores de videojuegos, un launcher visual facilita la interacción \
             con el motor, sus posibles versiones y la creación y edición de proyectos en desarrollo",
@@ -129,7 +129,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '1',
+            num: '1/3',
             title: "Pong",
             description: "Para poder desarrollar este primer proyecto era necesario implementar nuevas funcionalidades en el motor \
             que se usarán como base para las siguientes. Estas son: simulación de físicas en 2D para la colisión de \
@@ -142,7 +142,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '2',
+            num: '2/3',
             title: "Flappy Bird",
             description: "En este proyecto se implementa la carga de texturas, con las que a su vez \
             podremos dibujar texto en pantalla. La serialización de datos, que permite guardar y cargar escenas, \
@@ -156,7 +156,7 @@ const projects = [
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
-            num: '3',
+            num: '3/3',
             title: "Breakout",
             description: "Este proyecto hace un uso intensivo de las texturas, y para gestionarlas de manera correcta existen técnicas \
             muy utilizadas como la del 'atlas de textura': una única textura agrupará todas las que se usen en el juego, \
@@ -171,7 +171,7 @@ const projects = [
     ],
     [
         {
-            num: '01',
+            num: '1/4',
             title: "Validador de modelos y animaciones para importar a Unreal Engine",
             description: "Durante mi estancia en Pendulo Studios trabajé en herramientas encargadas de comprobar \
             que los modelos y animaciones provenientes del equipo de arte cumplieran los requisitos necesarios para su correcta \
@@ -187,7 +187,7 @@ const projects = [
             github: undefined,
         },
         {
-            num: '02',
+            num: '2/4',
             title: "Validador de nomenclaturas",
             description: "En grandes proyectos donde los archivos y las carpetas se cuentan por miles, es importante mantenerlos organizados \
             y con una nomenclatura precisa. Esta herramienta comprueba muy rápidamente y con una respuesta clara los posibles archivos \
@@ -199,21 +199,21 @@ const projects = [
             github: undefined,
         },
         {
-            num: '03',
+            num: '3/4',
             title: "Gestión de Apps a través de Telegram",
-            description: "Herramienta que gestiona todas las aplicaciones que uso en mi vida diaria. Haciendo uso de una Raspberri Pi y un bot de telegram \
+            description: "Herramienta que gestiona todas las aplicaciones que uso en mi vida diaria. Haciendo uso de una Raspberry Pi y un bot de Telegram \
             se ejecuta todo el tiempo un código que recibe e interpreta los mensajes que mandemos a este bot. A través de comandos determinados \
             se crean, modifican o eliminan tareas en Todoist. En Notion podemos gestionar bases de datos como listas de la compra, gastos o multimedia, \
-            ya que esta herramienta interpreta video, imágen y convierte archivos de voz en texto. También es capaz de crear notas de texto en formato \
-            'Markdown' que usará la base de datos de Obsidian para crear una nueva nota con el estilo y texto que le indiquemos. Por útlimo, encender \
-            o apagar un ordenador desde cualquier lugar, muy útil para conexiones a traves de una VPN que también gestiona esta Raspberry Pi.",
+            ya que esta herramienta interpreta video, imagen y convierte archivos de voz en texto. También es capaz de crear notas de texto en formato \
+            'Markdown' que usará la base de datos de Obsidian para crear una nueva nota con el estilo y texto que le indiquemos. Por último, encender \
+            o apagar un ordenador desde cualquier lugar, muy útil para conexiones a través de una VPN que también gestiona esta Raspberry Pi.",
             stack: [{name: "RaspberryPi"}, {name: "Todoist"}, {name: "Notion"}, {name: "Obsidian"}],
             image: "/python/automatizeBot.png",
             icon: undefined,
             github: "https://github.com/Cober-t/automaticeBotTelegram",
         },
         {
-            num: '04',
+            num: '4/4',
             title: "Launcher para proyectos del motor de videojuegos",
             description: "Herramienta de gestión de los proyectos y versiones de mi propio motor de videojuegos. Con la ayuda de un archivo json fácilmente editable \
             el launcher lee toda la carpeta de proyectos con miniaturas incluidas y, gracias a Qt, nos lo muestra todo visualmente. Al crear un nuevo proyecto no solo \
@@ -227,7 +227,7 @@ const projects = [
     ],
     [
         {
-            num: '01',
+            num: '1/2',
             title: "Generador de terreno aleatorio",
             description: "Haciendo uso del algoritmo 'Perlin Noise' se desarrolló este generador de terreno para juegos \
             del tipo RTS (Real-Time Strategy). A través de la interfaz de Unity se pueden modificar todas las variables \
@@ -241,7 +241,7 @@ const projects = [
             github: "https://github.com/Cober22/IAIA2",
         },
         {
-            num: '02',
+            num: '2/2',
             title: "Sistema de grid",
             description: "Herramienta desarrollada haciendo uso de las capacidades que nos da Unity para programar y modificar su editor. \
             Permite dibujar diferentes tipos de grid en la escena de Unity, personalizarlo con parametros como el tamaño de celda o su posición en el mundo. \
@@ -253,9 +253,11 @@ const projects = [
         },
     ],
 ]
-const projectsName = ["Game Engine", "Python", "Unity"]
+const projectsName = ["Mi propio Motor de Videojugos", "Python", "Unity"]
 
 const tabs = [ "Experiencia", "Estudios", "Habilidades", "Sobre mi"]
+
+var language = "es"
 
 const experience = {
     icon: "",
@@ -266,6 +268,12 @@ const experience = {
         company: "Pendulo Studios",
         position: "Tools & IT",
         duration: "Marzo 2023 - Abril 2024",
+        descriptionES: "dasds",
+        descriptionEN : "Throughout my time at Pendulo Studios I learned how to work with a large team, \
+        how to support systems that are part of a complex workflow and how to analyse and improve \
+        these systems to make them easier to use and develop. I also improved my skills as a programmer \
+        when making tools for Maya, Blender, Unreal Engine or Unity, using the languages \
+        Python, C++ and C# respectively.",
         image: "./tintin.jpg",
         link: "https://store.steampowered.com/app/2125090/Tintin_Reporter__Los_Cigarros_del_Faraon/?l=spanish",
     },
@@ -273,6 +281,8 @@ const experience = {
         company: "FIRESCALE Studios",
         position: "VFX & UI designer internship",
         duration: "Febrero 2022 - Abril 2022",
+        descriptionEN: "",
+        descriptionES: "",
         image: "./riseOfTheOverlords.jpg",
         link: "https://store.steampowered.com/app/1162140/Rise_Of_The_Overlords/",
     },
@@ -280,6 +290,8 @@ const experience = {
         company: "La Tribuna de Toledo",
         position: "Maquetación",
         duration: "Junio 2018 - Septiembre 2018",
+        descriptionEN: "",
+        descriptionES: "",
         image: undefined,
         link: "",
     },
@@ -341,12 +353,12 @@ const skills = {
         {
             icon: <DiJavascript />,
             name: "JavaScript",
-            level: "Princiante",
+            level: "Principiante",
         },
         {
             icon: <SiKotlin />,
             name: "Kotlin",
-            level: "Princiante",
+            level: "Principiante",
         }
     ],
     frameworks: [
@@ -374,7 +386,7 @@ const skills = {
         },
         {
             icon: <SiGodotengine />,
-            name: "Unreal Engine",
+            name: "Godot",
             level: "Intermedio",
         },
         {
@@ -431,7 +443,7 @@ const about = {
             fieldValue: "https://github.com/Cober-t",
         },
         {
-            fieldName: "Linkedin",
+            fieldName: "LinkedIn",
             fieldValue: "https://www.linkedin.com/in/jorge-tejado-l%C3%B3pez/",
         },
         {

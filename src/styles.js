@@ -11,10 +11,10 @@ const styles = {
     coreIndex:"fixed z-[90] flex flex-col left-full bottom-0 w-fit h-fit \
     uppercase font-titleSections font-semibold gap-y-4 \
     items-end justify-end text-[14px]",
-    indexMainNode: "flex hover:bg-red-700 min-w-[250px] items-center justify-between font-regular select-none",
+    indexMainNode: "flex hover:bg-red-700 min-w-[250px] items-center justify-between font-regular",
     indexMainNodeWidth: "opacity-0 bg-transparent w-20",
 
-    indexNode: "flex hover:bg-red-700 max-w-[250px] items-center justify-end font-regular select-none",
+    indexNode: "flex hover:bg-red-700 max-w-[250px] items-center justify-end font-regular",
     indexNodeWidth: "opacity-0 bg-transparent w-10",
 
     // NAV BAR
@@ -26,7 +26,7 @@ const styles = {
     h-screen w-full justify-center items-center",
     // splashScreenTitle: "items-center justify-center whitespace-pre-line text-transparent",
     splashScreenText: "w-full font-title flex items-center font-extrabold justify-center \
-    tracking-normal text-center h-screen select-none \
+    tracking-normal text-center h-screen \
     xs:leading-[35vw] sm:leading-[33vw] md:leading-[26vw] xl:leading-[24vw]",
     splashScreenBackgroundStyle: "flex flex-row h-screen w-full \
     bg-center bg-cover bg-no-repeat bg-clip-text",
