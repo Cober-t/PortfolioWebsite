@@ -1,6 +1,4 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
-import { Routes, Route } from "react-router-dom"
 import { AnimatePresence } from 'framer-motion'
 import '../style.css'
 import Header from "./Header/Header.jsx"
@@ -11,12 +9,12 @@ import Projects from "./Projects/Projects.jsx"
 
 export default function App() {
 
-    const location = useLocation()
-
     return (
         <>
         <AnimatePresence mode="wait">
+
             <Header />
+
             <div className='flex flex-col w-full h-full gap-y-28'>
                 <Home />
                 <Experience />
@@ -24,32 +22,6 @@ export default function App() {
                 <Contact />
             </div>
 
-            {/* <Routes location={location} key={location.pathname}>
-                <Route path="/" exact element={
-                    <>
-			        <Header />
-                    <Home />
-                    </>
-                }/>
-                <Route path="/experience" exact element={
-                    <>
-                    <Header />
-                    <Experience/>
-                    </>
-                } />
-                <Route path="/projects" exact element={
-                    <>
-                    <Header />
-                    <Projects/>
-                    </>
-                } />
-                <Route path="/contact" exact element={
-                    <>
-			        <Header />
-                    <Contact/>
-                    </>
-                } />
-            </Routes> */}
         </AnimatePresence>
         </>
     )

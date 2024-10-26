@@ -1,19 +1,14 @@
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react"
 import MotionTranstion from "../MotionTransition.jsx"
-
-import { useEffect, useState, useMemo } from "react"
-import { BsGithub, BsSteam } from "react-icons/bs"
+import { useState } from "react"
+import { BsGithub } from "react-icons/bs"
 import ProjectSlideButtons from "./ProjectSlideButtons.jsx"
 import "swiper/css"
 import { projects, projectsName } from "../../constants.jsx"
 
-
-
-
 const Projects = () => {
 
-    // const [project, setProject] = useState(projects[0][0])
     const [progress, setProgress] = useState([
         {id: 0, value: 100/projects[0].length},
         {id: 1, value: 100/projects[1].length},
@@ -51,10 +46,16 @@ const Projects = () => {
             <motion.div 
             initial={{opacity:0}}
             animate={{opacity:1, transition:{delay:0.4, duration:0.4, ease:"easeIn"}}}
-            className="min-h-[80vh] flex flex-col justify-center pb-12 px-12 xl:px-24 z-50">
+            className="min-h-[80vh] flex flex-col justify-center pb-12 px-12 xl:px-24"
+            id="PersonalProjects">
 
                 {projects.map((projectAux, index) => {
-                    return <div className={`${index != 0 && "mt-48"}`}>
+                    return (
+                    <div className={`${index != 0 && "mt-72"}`}
+                        id={index == 0 && "C++" ||
+                            index == 1 && "Python" ||
+                            index == 2 && "C#"}
+                    >
                         <div className="items-center justify-center grid-cols-3 grid
                         container mx-auto">
                             <div className="w-full items-center justify-center text-nowrap">
@@ -155,6 +156,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
+                    )
                 })}
             </motion.div>
         </>

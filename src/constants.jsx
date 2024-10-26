@@ -3,12 +3,49 @@ const pathGameEngine = "src/assets/toolGameEngine.json"
 const pathPython = "src/assets/toolPython.json"
 const pathUnity = "src/assets/toolUnity.json"
 
+import MotionTransition from "./components/MotionTransition"
 
 // # ICONS
 import logo from "$iconsAndCV/icons/logo.svg"
 import menu from "$iconsAndCV/icons/menu.svg"
 import close from "$iconsAndCV/icons/close.svg"
 import downloadCV from "$iconsAndCV/alicia.pdf"
+
+const ScrollTo = ({id, text, props}) =>
+{
+    return (
+        <>
+        <button className={props}
+        onClick={()=>{
+            const element = document.getElementById(id)
+            element?.scrollIntoView({behavior: "smooth"})
+            // element?.scrollIntoView({behavior: "smooth", block: 'center', inline: 'center'})
+        }}>{text}</button>
+        </>
+    )
+}
+
+const hero = [
+    {
+        name:"Title",
+        textES:"Hola, soy",
+        textEN:"Hola, soy"
+    },
+    {
+        name:"Description",
+        textES:<div>Durante años he estudiado la programación de gráficos, 
+        desarrollando incluso mi propio motor de videojuegos. 
+        Mi 
+        <ScrollTo id="Experience" text=" experiencia laboral " props={"text-accent hover:text-darkOrange whitespace-pre"}/>
+        me ha llevado a trabajar con motores como Unreal Engine o Unity 
+        y he desarrollado plugins en Maya y Blender entre otros, 
+        lo que me ha aportado un alto nivel de conocimiento en estos programas y en sus lenguajes. 
+        Día a día continuo aprendiendo a través de
+        <ScrollTo id="PersonalProjects" text=" projectos personales." props={"text-accent hover:text-darkOrange whitespace-pre"}/>
+        </div>,
+        textEN:"Hi, I'm"
+    }
+]
 
 const links = [
     {
@@ -37,11 +74,11 @@ const projects = [
         {
             num: '1/8',
             title: "Core",
-            description: "A la hora de comenzar un proyecto como es la programación de un motor de videojuegos \
-            existen una serie de características fundamentales que debemos tener en cuenta, \
-            y que facilitan la creación de cualquier tipo de juego. A continuación, explicaré \
-            su desarrollo apoyándome en proyectos terminados.\
-            A continuación explico el desarrollo de dichas características a través de proyectos terminados.",
+            description: <div>A la hora de comenzar un proyecto como es la programación de un motor de videojuegos 
+            existen una serie de características fundamentales que debemos tener en cuenta,
+            y que facilitan <span className="font-nodeDescription font-bold italic text-accent/60"> la creación de cualquier tipo de juego</span>. A continuación, explicaré 
+            su desarrollo apoyándome en proyectos terminados.
+            </div>,
             stack: [{name: "C++"}, {name: "Multithreading"}, {name: "OpenGL"}],
             image: "/myGameEngine/coreCode.png",
             icon: undefined,
@@ -455,11 +492,13 @@ const about = {
 
 
 export {
+    ScrollTo,
     logo,
     menu,
     close,
     downloadCV,
 
+    hero, 
     about, experience, education, skills, tabs,
 
     projects,

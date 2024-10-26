@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { menu, close, links } from "../../constants.jsx"
 import { motion } from "framer-motion"
 import IconSVG from "./IconSVG.jsx"
-import { Link } from "react-router-dom"
+import { ScrollTo } from "../../constants.jsx"
 import { useLocation } from "react-router-dom"
 
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
         animate={{opacity:1}}
         transition={{duration:0.2, ease:"easeIn"}}
         className={`bg-backgroundColor h-[100vh] w-[60vw] flex fixed right-0 top-0 
-        z-40 text-white xl:hidden`}
+        z-[100] text-white xl:hidden`}
         >
           <div className="flex flex-col items-center justify-center gap-y-8 w-full h-full 
           uppercase list-none">
@@ -56,9 +56,14 @@ const Navbar = () => {
                 setToggle(!toggle);
                 }}
             >
-                <Link to={link.path} key={index} className={`${NavColor(link.path)} text-xl xl:text-2xl`}>
-                  <h1>{link.name}</h1>
-                </Link>
+                <ScrollTo id={
+                  index == 0 && "Inicio" ||
+                  index == 1 && "Experience" ||
+                  index == 2 && "PersonalProjects" ||
+                  index == 3 && "Contact"} 
+                  text={link.name}
+                  props={`hover:text-accent hover:border-darkOrange text-white/60
+                    text-[5vw] font-thin font-tags uppercase`}/>
             </li>
             ))}
           </div>

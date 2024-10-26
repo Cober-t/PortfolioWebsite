@@ -19,6 +19,7 @@ const Experience = () => {
 
             <motion.div 
             initial={{opacity:0}}
+            id="Experience"
             animate={{opacity:1, transition:{delay:0.4, duration:0.4, ease:"easeIn"}}}
             className="flex h-full items-center justify-center py-12 xl:py-0 xl:px-24">
 

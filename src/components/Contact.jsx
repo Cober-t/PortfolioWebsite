@@ -56,7 +56,8 @@ const Contact = () => {
 	return (
 		<>
 		<MotionTranstion />
-		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden mt-24`}>
+		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden mt-24`}
+		id="Contact" >
 
 			<h3 className={`text-6xl xl:text-8xl font-tags flex flex-col items-center mb-3`}>
 				CONTACTAME
@@ -64,7 +65,7 @@ const Contact = () => {
 			<p className="flex text-white/60 justify-center font-medium text-md mb-3">
 				jorgetejadolopez@gmail.com
 			</p>
-			<a href="https://www.linkedin.com/in/jorge-tejado-l%C3%B3pez/" 
+			<a href="https://www.linkedin.com/in/jorge-tejado-l%C3%B3pez/" target="_blank"
 			className={`flex text-white/60 hover:text-accent underline xl:text-xl 
 			capitalize font-medium text-sm justify-center mb-3`}>
 				LinkedIn

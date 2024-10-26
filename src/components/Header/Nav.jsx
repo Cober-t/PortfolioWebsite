@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { links } from "../../constants.jsx"
-
+import { ScrollTo } from "../../constants.jsx"
 
 const Nav = () => {
 
@@ -35,9 +35,14 @@ const Nav = () => {
     return <nav className={`flex gap-16 flex-row ${scrolled ? "bg-primary" : "bg-transparent"}`}>
         {links.map((link, index)=> {
             return (
-            <Link to={link.path} key={index} className={`${NavColor(link.path)}`}>
-                <h1 className="text-4xl font-thin font-tags uppercase">{link.name}</h1>
-            </Link>
+                <ScrollTo id={
+                  index == 0 && "Inicio" ||
+                  index == 1 && "Experience" ||
+                  index == 2 && "PersonalProjects" ||
+                  index == 3 && "Contact"} 
+                  text={link.name}
+                  props={`hover:text-accent hover:border-darkOrange 
+                    text-[2vw] font-thin font-tags uppercase`}/>
             )
         })}
     </nav>
