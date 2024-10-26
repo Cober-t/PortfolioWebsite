@@ -4,9 +4,12 @@ import { motion } from "framer-motion"
 import IconSVG from "./IconSVG.jsx"
 import { ScrollTo } from "../../constants.jsx"
 import { useLocation } from "react-router-dom"
+import { LangContext } from "../App.jsx"
+import { useContext } from "react"
 
 const Navbar = () => {
   
+  const { lang } = useContext(LangContext)
   const location = useLocation()
   const [toggle, setToggle] = useState(false);
 
@@ -61,7 +64,7 @@ const Navbar = () => {
                   index == 1 && "Experience" ||
                   index == 2 && "PersonalProjects" ||
                   index == 3 && "Contact"} 
-                  text={link.name}
+                  text={lang == "ES" ? link.nameES : link.nameEN}
                   props={`hover:text-accent hover:border-darkOrange text-white/60
                     text-[5vw] font-thin font-tags uppercase`}/>
             </li>

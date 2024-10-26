@@ -1,17 +1,29 @@
 import MotionTranstion from "../MotionTransition.jsx"
 import { motion } from "framer-motion"
-import { useState } from "react"
-import { tabs } from "../../constants.jsx"
+import { useEffect, useState } from "react"
+import { tabsEN, tabsES } from "../../constants.jsx"
 
 import Skills from "../Experience/Skills.jsx"
 import AboutMe from "../Experience/AboutMe.jsx"
 import ExperienceWork from "../Experience/ExperienceWorks.jsx"
 import Education from "../Experience/Education.jsx"
+import { useContext } from "react"
+import { LangContext } from "../App.jsx"
 
 
 const Experience = () => {
-
+    
+    const { lang } = useContext(LangContext)
     const [currentTab, setCurrentTab] = useState(0);
+    const [tabsLang, setTabsLanguage] = useState(tabsES);
+
+    useEffect(function()
+    {
+        if (lang == "ES")
+            setTabsLanguage(tabsES)
+        else if (lang == "EN")
+            setTabsLanguage(tabsEN)
+    }, [lang])
 
     return (
         <>
@@ -25,7 +37,7 @@ const Experience = () => {
 
                 <div className="container mx-auto flex flex-col xl:flex-row gap-[60px]">
                     <div className="flex flex-col w-full max-w-[380px] mx-auto">
-                        {tabs.map((tab, index) => {
+                        {tabsLang.map((tab, index) => {
                             return <button key={index}
                             className={`border-white/20 p-3 justify-center items-center transition-all
                             inline-flex w-full tracking-wider whitespace-nowrap font-tags text-2xl font-medium uppercase

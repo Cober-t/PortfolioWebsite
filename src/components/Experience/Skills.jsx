@@ -1,10 +1,14 @@
 import { skills } from "../../constants.jsx"
 import ProjectSlideButtons from "../Projects/ProjectSlideButtons.jsx"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useContext } from "react"
+import { LangContext } from "../App.jsx"
 import "swiper/css"
 
-const Skills = () => {
 
+const Skills = () => {
+    
+    const { lang } = useContext(LangContext)
     function skillLevelColored(level)
     {
         if (level.toLowerCase() == "principiante")
@@ -21,7 +25,7 @@ const Skills = () => {
 
             <p className="font-title transition-all
             flex text-4xl font-medium uppercase justify-center">
-                Lenguajes
+                {lang == "ES" ? "Lenguajes": "Languages"}
             </p>
             <Swiper spaceBetween={10} slidesPerView={4}
             className="h-[200px] xl:w-[1000px] w-full">
@@ -35,8 +39,8 @@ const Skills = () => {
                         </div>
                         <p className="text-[13px] sm:text-[16px] font-medium uppercase">{skill.name}</p>
                         <p className={`font-light tracking-wider text-[10px] sm:text-xs text-accent uppercase
-                         hover:opacity-100 ${skillLevelColored(skill.level)}`}>
-                            {skill.level}
+                         hover:opacity-100 ${skillLevelColored(lang == "ES" ? skill.levelES : skill.levelEN)}`}>
+                            {lang == "ES" ? skill.levelES : skill.levelEN }
                         </p>
                     </div>
                     </SwiperSlide>
@@ -65,23 +69,17 @@ const Skills = () => {
                         </div>
                         <p className="text-[13px] sm:text-[16px] font-medium uppercase">{skill.name}</p>
                         <p className={`font-light tracking-wider text-[10px] sm:text-xs text-accent uppercase
-                         hover:opacity-100 ${skillLevelColored(skill.level)}`}>
-                            {skill.level}
+                         hover:opacity-100 ${skillLevelColored(lang == "ES" ? skill.levelES : skill.levelEN)}`}>
+                            {lang == "ES" ? skill.levelES : skill.levelEN }
                         </p>
                     </div>
                     </SwiperSlide>
                 })}
-                {/* <ProjectSlideButtons containerStyles="flex gap-2 absolute right-0 
-                bottom-[calc(50%_-_22px)] z-20 w-full justify-between -translate-y-5"
-                projectSize={5}
-                btnStyles="hover:bg-accent text-primary
-                text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-                /> */}
             </Swiper>
 
             <p className="font-title transition-all
             flex text-4xl font-medium uppercase justify-center">
-                Programas
+                {lang == "ES" ? "Programas": "Programs"}
             </p>
             <Swiper spaceBetween={10} slidesPerView={4}
             className="h-[200px] xl:w-[1000px] w-full">
@@ -95,8 +93,8 @@ const Skills = () => {
                         </div>
                         <p className="text-[13px] sm:text-[16px] font-medium uppercase">{skill.name}</p>
                         <p className={`font-light tracking-wider text-[10px] sm:text-xs text-accent uppercase
-                         hover:opacity-100 ${skillLevelColored(skill.level)}`}>
-                            {skill.level}
+                         hover:opacity-100 ${skillLevelColored(lang == "ES" ? skill.levelES : skill.levelEN)}`}>
+                            {lang == "ES" ? skill.levelES : skill.levelEN }
                         </p>
                     </div>
                     </SwiperSlide>

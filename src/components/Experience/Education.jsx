@@ -1,8 +1,12 @@
 import { education } from "../../constants.jsx"
+import { useContext } from "react"
+import { LangContext } from "../App.jsx"
 
 
 const Education = () => {
-
+    
+    const { lang } = useContext(LangContext)
+    
     return (
         <div className="w-full mb-20">
             <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -17,11 +21,13 @@ const Education = () => {
                                     <span className="text-accent font-tags text-2xl font-medium">{item.duration}</span> 
                                     <h3 className="text-xl min-h-[60px] font-medium
                                     text-center lg:text-left">
-                                        {item.degree}
+                                        {lang == "ES" ? item.degreeES : item.degreeEN}
                                     </h3>
                                     <div className="flex items-center gap-3">
                                     <span className="w-[6px] h-[6px] bg-accent" />
-                                    <p className="text-white/60 font-medium">{item.institution}</p>
+                                    <p className="text-white/60 font-medium">
+                                        {lang == "ES" ? item.institutionES : item.institutionEN}
+                                    </p>
                                     </div>
                                 </li>
                             )

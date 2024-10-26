@@ -1,9 +1,13 @@
 import { experience } from "../../constants.jsx"
 import { BsSteam } from "react-icons/bs"
+import { useContext } from "react"
+import { LangContext } from "../App.jsx"
 
 
 const ExperienceWork = () => {
 
+    const { lang } = useContext(LangContext)
+ 
     return (
         <div className="w-full h-full mb-60">
             <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -19,20 +23,22 @@ const ExperienceWork = () => {
                                     <div className="w-full flex xl:flex-row flex-col items-center justify-center sm:justify-between">
                                         <div>
                                             <span className="text-accent font-tags text-2xl font-medium">
-                                                    {item.duration}
+                                                    { lang == "ES" ? item.durationES : item.durationEN }
                                                 </span> 
                                             <h3 className="text-xl min-h-[60px] font-medium
                                             text-center lg:text-left">
-                                                    {item.position}
+                                                    { lang == "ES" ? item.positionES : item.positionEN }
                                                 </h3>
                                             <div className="flex items-center gap-3 xl:mb-0 mb-5">
                                                 <span className="w-[6px] h-[6px] bg-accent" />
-                                                <p className="text-white/60 font-medium">{item.company}</p>
+                                                <p className="text-white/60 font-medium">
+                                                    { lang == "ES" ? item.companyES : item.companyEN }
+                                                </p>
                                             </div>
                                         </div>
                                         <div className="sm:max-w-[70%] xl:max-w-[50%] min-w-[225px] text-pretty
                                         text-white/60 mb-5 xl:ml-10 xl:mb-0 font-medium xl:text-xs text-sm">
-                                            {item.descriptionEN}
+                                            { lang == "ES" ? item.descriptionES : item.descriptionEN }
                                         </div>
                                         {
                                             item.image !== undefined && 

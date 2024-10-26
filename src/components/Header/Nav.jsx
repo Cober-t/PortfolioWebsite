@@ -2,8 +2,12 @@ import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { links } from "../../constants.jsx"
 import { ScrollTo } from "../../constants.jsx"
+import { useContext } from "react"
+import { LangContext } from "../App.jsx"
 
 const Nav = () => {
+
+    const {lang } = useContext(LangContext)
 
     function NavColor(path) {
       let color = "text-white hover:accent"
@@ -40,7 +44,7 @@ const Nav = () => {
                   index == 1 && "Experience" ||
                   index == 2 && "PersonalProjects" ||
                   index == 3 && "Contact"} 
-                  text={link.name}
+                  text={lang == "ES" ? link.nameES : link.nameEN}
                   props={`hover:text-accent hover:border-darkOrange 
                     text-[2vw] font-thin font-tags uppercase`}/>
             )

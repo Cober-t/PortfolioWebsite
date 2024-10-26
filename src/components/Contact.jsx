@@ -1,11 +1,12 @@
 import { useState, useRef } from "react"
 import emailjs from '@emailjs/browser'
 import { styles } from "../styles"
-
-import MotionTranstion from "./MotionTransition.jsx"
+import { useContext } from "react"
+import { LangContext } from "./App.jsx"
 
 const Contact = () => {
 
+	const { lang } = useContext(LangContext)
 	const formRef = useRef()
 	const [form, setForm] = useState({
 		name: '',
@@ -55,12 +56,11 @@ const Contact = () => {
 
 	return (
 		<>
-		<MotionTranstion />
 		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden mt-24`}
 		id="Contact" >
 
 			<h3 className={`text-6xl xl:text-8xl font-tags flex flex-col items-center mb-3`}>
-				CONTACTAME
+				{lang == "ES" ? "CONTACT ME" : "CONTACTAME"}
 			</h3>
 			<p className="flex text-white/60 justify-center font-medium text-md mb-3">
 				jorgetejadolopez@gmail.com
@@ -77,7 +77,8 @@ const Contact = () => {
 			<form ref={formRef} onSubmit={handleSubmit} className="mb-10 text-white/50">
 				<label className="flex flex-col mb-10 xl:ml-10 xl:translate-x-[30vw]">
 					<p className="text-white/60 text-md font-regular mb-3 white">
-						{`Rellena el formulario y te contestare lo antes posible:`}
+						{lang == "ES" ? "Rellena el formulario y te contestare lo antes posible:"
+						 : "Fill out the form and I will answer you as soon as possible:"}
 					</p>
 					<div className="h-[3rem] w-0.5 bg-white/50 ">
 						<input 
@@ -85,7 +86,7 @@ const Contact = () => {
 							name="name"
 							value={form.name}
 							onChange={handleChange}
-							placeholder="TU NOMBRE..."
+							placeholder={lang == "ES" ? "TU NOMBRE..." : "YOUR NAME..."}
 							className="py-4 px-6 placeholder:text-white/50 bg-transparent font-regular outline-none"
 						/>
 					</div>
@@ -98,7 +99,7 @@ const Contact = () => {
 							name='email'
 							value={form.email}
 							onChange={handleChange}
-							placeholder="TU EMAIL..."
+							placeholder={lang == "ES" ? "TU EMAIL..." : "YOUR EMAIL..."}
 							className='py-4 px-6 placeholder:text-white/50 bg-transparent font-regular outline-none'
 						/>
 					</div>
@@ -111,7 +112,7 @@ const Contact = () => {
 							name="message"
 							value={form.message}
 							onChange={handleChange}
-							placeholder="TU MENSAJE..."
+							placeholder={lang == "ES" ? "TU MENSAJE..." : "YOUR MESSAGE..."}
 							className="py-4 px-6 placeholder:text-white/50 bg-transparent font-regular outline-none"
 						/>
 					</div>
@@ -123,7 +124,7 @@ const Contact = () => {
 						className="py-3 px-8 bg-[#38383e] opacity-45 hover:opacity-85
 						outline-none w-fit text-white/80 font-homeSections font-medium"
 					>
-						{loading ? 'Enviando...' : 'Enviar'}
+						{lang == "ES" ? loading ? 'Enviando...' : 'Enviar' : loading ? 'Sending...' : 'Send'}
 					</button>
 				</div>
 

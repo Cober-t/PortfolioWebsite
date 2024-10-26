@@ -1,17 +1,26 @@
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react"
 import MotionTranstion from "../MotionTransition.jsx"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BsGithub } from "react-icons/bs"
 import ProjectSlideButtons from "./ProjectSlideButtons.jsx"
 import "swiper/css"
-import { projects, projectsName } from "../../constants.jsx"
+import { projects, projectsNameES, projectsNameEN } from "../../constants.jsx"
 import { LangContext } from "../App.jsx"
 import { useContext } from "react"
 
 const Projects = () => {
 
-    const {lang, setLang} = useContext(LangContext)
+    const { lang } = useContext(LangContext)
+    const [projectsNameLang, setProjectsLanguage] = useState(projectsNameES)
+
+    useEffect(function()
+    {
+        if (lang == "ES")
+            setProjectsLanguage(projectsNameES)
+        else if (lang == "EN")
+            setProjectsLanguage(projectsNameEN)
+    }, [lang])
 
     const [progress, setProgress] = useState([
         {id: 0, value: 100/projects[0].length},
@@ -66,7 +75,7 @@ const Projects = () => {
                                 <p className={`border-white/20 font-tags tracking-wider text-[26px] xl:text-[32px] font-light
                                 uppercase pt-2.5 pb-2.5 justify-center flex transition-all 
                                 bg-pink-20 border-l-2 border-t-2 border-b-0 border-r-2`}>
-                                    {projectsName[index]}
+                                    {projectsNameLang[index]}
                                 </p>
                             </div> 
                         </div>
@@ -89,21 +98,27 @@ const Projects = () => {
                                         {/* project category */}
                                         <h2 className="text-[48px] sm:text-[62px] font-tags font-bold leading-none text-white
                                         hover:text-accent transition-all duration-300">
-                                            {projectAux[0].title}
+                                            {lang == "ES" ? projectAux[0].titleES : projectAux[0].titleEN}
                                         </h2>
                                         {/* project description */}
                                         <p className="text-white/60 text-[14px] sm:text-[16px] font-semibold text-left font-nodeDescription
                                         whitespace-pre-line">
-                                            {projectAux[0].description}
+                                            {lang == "ES" ? projectAux[0].descriptionES : projectAux[0].descriptionEN}
                                         </p>
                                         {/* stack */}
                                         <ul className="flex gap-4">
-                                            {projectAux[0].stack.map((item, index) => {
-                                                return (
-                                                    <li key={index} className="text-2xl sm:text-3xl font-regular tracking-wider font-tags text-accent italic">
-                                                        {item.name}
-                                                    </li>
-                                                )
+                                            {lang == "ES" 
+                                            ?
+                                            projectAux[0].stackES.map((item, index) => {
+                                                return <li key={index} className="text-2xl sm:text-3xl font-regular tracking-wider font-tags text-accent italic">
+                                                    {item.name}
+                                                </li>
+                                            }) 
+                                            :
+                                            projectAux[0].stackEN.map((item, index) => {
+                                                return <li key={index} className="text-2xl sm:text-3xl font-regular tracking-wider font-tags text-accent italic">
+                                                    {item.name}
+                                                </li>
                                             })}
                                         </ul>
                                         {/* border */}

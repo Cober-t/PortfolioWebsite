@@ -1,6 +1,10 @@
 import { downloadCV, hero, ScrollTo } from "../constants";
+import { LangContext } from "./App";
+import { useContext } from "react";
 
 const Hero = () => {
+
+  const {lang, setLang} = useContext(LangContext)
 
   return (
     <div className="container mx-auto h-full mb-60">
@@ -15,11 +19,11 @@ const Hero = () => {
           <div className="items-center flex flex-col justify-center text-center xl:text-left xl:pr-[100px]">
 
             <h1 className={`text-[28px] md:text-[32px] xl:text-[52px] mb-5 leading-[1.5] xl:whitespace-nowrap`}>
-              {hero[0].textES} <span className='text-accent'>Jorge Tejado</span>
+              {lang == "ES" ? hero[0].textES : hero[0].textEN} <span className='text-accent'>Jorge Tejado</span>
             </h1>
 
             <p className={`mx-6 md:max-w-[600px] xl:max-w-[1000px] text-[14px] md:text-[15px] xl:text-[18px] font-semibold mb-9 text-white/70`}>
-              {hero[1].textES}
+            {lang == "ES" ? hero[1].textES : hero[1].textEN}
             </p>
 
             <div className="hidden sm:visible sm:flex w-full fzzzlex-row items-center justify-center gap-x-10 mb-5">
@@ -37,7 +41,7 @@ const Hero = () => {
                   <a href={downloadCV} download="JorgeTejadoLópez_CV"
                   className="outline w-[120px] uppercase justify-center flex items-center font-tags text-2xl tracking-wider font-thin
                   outline-2 p-2 outline-darkOrange text-accent">
-                    Descarga CV
+                    {lang == "ES" ? "Descarga CV" : "Download CV"}
                   </a>
               </div>
 
@@ -50,7 +54,7 @@ const Hero = () => {
                     const element = document.getElementById("Contact")
                     element?.scrollIntoView({behavior:"smooth"})
                   }}>
-                    Contactame
+                    {lang == "ES" ? "Contactame" : "Contact me"}
                   </button>
               </div>
             </div>
