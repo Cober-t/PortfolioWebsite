@@ -6,8 +6,12 @@ import { BsGithub } from "react-icons/bs"
 import ProjectSlideButtons from "./ProjectSlideButtons.jsx"
 import "swiper/css"
 import { projects, projectsName } from "../../constants.jsx"
+import { LangContext } from "../App.jsx"
+import { useContext } from "react"
 
 const Projects = () => {
+
+    const {lang, setLang} = useContext(LangContext)
 
     const [progress, setProgress] = useState([
         {id: 0, value: 100/projects[0].length},

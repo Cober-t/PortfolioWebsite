@@ -1,6 +1,4 @@
-import { about } from "../../constants.jsx"
-import { Link } from "react-router-dom"
-
+import { about, ScrollTo } from "../../constants.jsx"
 
 const AboutMe = () => {
 
@@ -21,9 +19,8 @@ const AboutMe = () => {
                             </span>
                             {
                                 about.items.length - 1 === index &&
-                                <Link  to="/contact" className={`text-[18px] xl:text-xl font-medium hover:text-accent underline`}>
-                                    {item.fieldValue}
-                                </Link>
+                                <ScrollTo id="Contact" text={item.fieldValue}
+                                props={`text-[18px] xl:text-xl font-medium hover:text-accent underline`} />
                                 ||
                                 about.items.length - 2 === index &&
                                 <a href={item.fieldValue} className={`text-[18px] hover:text-accent underline

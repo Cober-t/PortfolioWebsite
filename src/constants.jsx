@@ -3,13 +3,13 @@ const pathGameEngine = "src/assets/toolGameEngine.json"
 const pathPython = "src/assets/toolPython.json"
 const pathUnity = "src/assets/toolUnity.json"
 
-import MotionTransition from "./components/MotionTransition"
 
 // # ICONS
 import logo from "$iconsAndCV/icons/logo.svg"
 import menu from "$iconsAndCV/icons/menu.svg"
 import close from "$iconsAndCV/icons/close.svg"
 import downloadCV from "$iconsAndCV/alicia.pdf"
+
 
 const ScrollTo = ({id, text, props}) =>
 {
@@ -293,8 +293,6 @@ const projects = [
 const projectsName = ["Mi propio Motor de Videojugos", "Python", "Unity"]
 
 const tabs = [ "Experiencia", "Estudios", "Habilidades", "Sobre mi"]
-
-var language = "es"
 
 const experience = {
     icon: "",
