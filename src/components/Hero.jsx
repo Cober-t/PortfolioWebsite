@@ -3,7 +3,7 @@ import { downloadCV, hero, ScrollTo } from "../constants";
 const Hero = () => {
 
   return (
-    <div className="container mx-auto h-full">
+    <div className="container mx-auto h-full mb-60">
       <div id="Inicio"
       className={`relative w-full flex flex-col xl:flex-row 
       items-center justify-center xl:pt-8 xl:pb-24 xl:mt-10 gap-x-[7vw] xl:pl-20`}>
@@ -23,11 +23,11 @@ const Hero = () => {
             </p>
 
             <div className="hidden sm:visible sm:flex w-full fzzzlex-row items-center justify-center gap-x-10 mb-5">
-              <div className="gap-10 flex text-[16px] md:text-[26px] text-white/15 uppercase ">
-                  <ScrollTo id="C++" text="C++" props={"hover:text-accent/60"}/>
-                  <ScrollTo id="C#" text="C#" props={"hover:text-accent/60"}/>
-                  <ScrollTo id="Python" text="Python" props={"hover:text-accent/60"}/>
-                  <ScrollTo id="C++" text="OpenGL/WebGL" props={"hover:text-accent/60"}/>
+              <div className="gap-10 flex text-[16px] md:text-[26px] text-white/15">
+                  <ScrollTo id="C++" text="C++" props={"hover:text-accent/60 uppercase"}/>
+                  <ScrollTo id="C#" text="C#" props={"hover:text-accent/60 uppercase"}/>
+                  <ScrollTo id="Python" text="Python" props={"hover:text-accent/60 uppercase"}/>
+                  <ScrollTo id="C++" text="OpenGL/WebGL" props={"hover:text-accent/60 uppercase"}/>
               </div>
             </div>
 

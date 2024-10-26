@@ -17,7 +17,7 @@ const Skills = () => {
 
     return (
         <div className="w-full h-full">
-        <div className="flex flex-col gap-[20px]">
+        <div className="flex flex-col gap-[20px] mb-60">
 
             <p className="font-title transition-all
             flex text-4xl font-medium uppercase justify-center">

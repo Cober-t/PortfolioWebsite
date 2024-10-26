@@ -32,7 +32,7 @@ const Nav = () => {
     }, []);
 
     
-    return <nav className={`flex gap-16 flex-row ${scrolled ? "bg-primary" : "bg-transparent"}`}>
+    return <nav className={`flex gap-12 flex-row ${scrolled ? "bg-primary" : "bg-transparent"}`}>
         {links.map((link, index)=> {
             return (
                 <ScrollTo id={

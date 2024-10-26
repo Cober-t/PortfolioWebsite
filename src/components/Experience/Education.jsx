@@ -4,7 +4,7 @@ import { education } from "../../constants.jsx"
 const Education = () => {
 
     return (
-        <div className="w-full">
+        <div className="w-full mb-20">
             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl xl:text-5xl font-bold font-nodeTitle uppercase">{education.title}</h3>
                 <div className="h-fit">

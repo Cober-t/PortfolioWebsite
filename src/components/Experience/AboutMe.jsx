@@ -3,7 +3,7 @@ import { about, ScrollTo } from "../../constants.jsx"
 const AboutMe = () => {
 
     return (
-        <div className="w-full text-center xl:text-left">
+        <div className="w-full text-center xl:text-left mb-60">
             <div className="flex flex-col gap-[30px] items-center xl:items-start">
                 <h3 className="text-5xl font-bold font-nodeTitle uppercase">{about.title}</h3>
                 <p className="max-w-[400px] xl:max-w-[600px] text-white/60 mx-5 text-pretty xl:mx-0 font-medium">

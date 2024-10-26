@@ -11,18 +11,15 @@ const Header = () => {
 	{
 		return (
 			<label className="inline-flex items-center cursor-pointer">
-			<input type="checkbox" value={lang} className="sr-only peer"
-			onClick={()=>setLang( lang=="ES" ? "EN" : "ES" )}/>
-			<div 
-			className="relative w-11 h-6 bg-accent peer-focus:outline-none 
-			peer-focus:ring-4 peer-focus:ring-darkOrange
-			rounded-full peer peer-checked:after:translate-x-full 
-			rtl:peer-checked:after:-translate-x-full peer-checked:after:border-accent
-			after:content-[''] after:absolute after:top-[2px] after:start-[2px] 
-			after:bg-darkOrange after:border-darkOrange after:border 
-			after:rounded-full after:h-5 after:w-5 after:transition-all 
-			peer-checked:bg-accent"></div>
-			<span class="ms-3 text-sm text-accent font-bold">{lang}</span>
+				<input type="checkbox" value={lang} className="sr-only peer"
+				onClick={()=>setLang( lang=="ES" ? "EN" : "ES" )}/>
+				<div id="toggle"
+				className={`relative w-8 h-8 bg-accent peer-focus:outline-none 
+				ring-4 ring-darkOrange focus:ring-8 focus:ring-darkOrange text-[14px]
+				rounded-full text-center items-center transition-all
+				xl:mb-3 xl:mr-5`}>
+					<p className="xl:mb-2 mt-1 mr-0.5">{lang}</p>
+				</div>
 			</label>
 		)
 	}
@@ -31,18 +28,25 @@ const Header = () => {
 		<div className="px-[5vw] flex justify-between items-center
 		font-['Tahoma'] xs:text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.75vw]">
 			{/* mt-8 ml-20 fixed left-0 top-0 */}
-			<h1 id="Inicio" className="text-5xl sm:text-6xl font-semibold font-tags">
+			<button id="Inicio" className="text-5xl sm:text-6xl font-semibold font-tags">
 				Portfolio <span className="text-accent text-xl">■</span>
-			</h1>
+			</button>
 
-			<ToggleButton />
+			<div className="flex flex-row justify-end items-center">
 
-			<div className="hidden xl:flex items-center">
-				<Nav />
-			</div>
+				<div className="hidden xl:flex-row xl:flex items-center">
+					<Nav />
+					<div className="xl:mt-0 ml-8 xl:relative fixed top-0 mt-10">
+						<ToggleButton />
+					</div>
+				</div>
 
-			<div className="xl:hidden">
-				<MobileNav />
+				<div className="xl:hidden">
+					<div className="right-16 fixed top-0 mt-10">
+						<ToggleButton />
+					</div>
+					<MobileNav />
+				</div>
 			</div>
 		</div>
     </header>
