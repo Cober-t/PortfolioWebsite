@@ -13,7 +13,7 @@ export const LangContext = createContext()
 
 export default function App() {
 
-    const [lang, setLang] = useState("ES")
+    const [lang, setLang] = useState("EN")
 
     return (
         <>
