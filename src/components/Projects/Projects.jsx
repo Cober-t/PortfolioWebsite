@@ -101,7 +101,7 @@ const Projects = () => {
                                             {lang == "ES" ? projectAux[0].titleES : projectAux[0].titleEN}
                                         </h2>
                                         {/* project description */}
-                                        <p className="text-white/60 text-[14px] sm:text-[16px] font-semibold text-left font-nodeDescription
+                                        <p className="text-white/60 text-[14px] sm:text-[16px] text-left font-nodeDescription
                                         whitespace-pre-line">
                                             {lang == "ES" ? projectAux[0].descriptionES : projectAux[0].descriptionEN}
                                         </p>
