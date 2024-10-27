@@ -7,27 +7,13 @@ import { LangContext } from "../App.jsx"
 
 const Nav = () => {
 
-    const {lang } = useContext(LangContext)
-
-    function NavColor(path) {
-      let color = "text-white hover:accent"
-    
-      if (window.location.pathname === path)
-        color = "hover:text-darkOrange text-accent border-b-2 border-accent hover:border-darkOrange"
-      
-      return `${color} capitalize text-xl hover:text-accent transition-all`
-	  }
-
+    const { lang } = useContext(LangContext)
     const [scrolled, setScrolled] = useState(false);
   
     useEffect(() => {
       const handleScroll = () => {
         const scrollTop = window.scrollY;
-        if (scrollTop > 100) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
+        setScrolled(scrollTop > 100);
       };
   
       window.addEventListener("scroll", handleScroll);
@@ -46,7 +32,7 @@ const Nav = () => {
                   index == 3 && "Contact"} 
                   text={lang == "ES" ? link.nameES : link.nameEN}
                   props={`hover:text-accent hover:border-darkOrange 
-                    text-[2vw] font-thin font-tags uppercase`}/>
+                    text-[2vw] font-tags font-thin uppercase`}/>
             )
         })}
     </nav>

@@ -69,7 +69,7 @@ const Projects = () => {
             <MotionTranstion />
 
             <motion.div 
-            initial={{opacity:0}}
+            initial={{opacity:0}} 
             animate={{opacity:1, transition:{delay:0.4, duration:0.4, ease:"easeIn"}}}
             className="min-h-[80vh] flex flex-col justify-center pb-12 px-12 xl:px-24"
             id="PersonalProjects">
@@ -83,13 +83,15 @@ const Projects = () => {
                     >
                         <div className="items-center justify-center grid-cols-3 grid
                         container mx-auto">
-                            <div className="w-full items-center justify-center text-nowrap">
+                            <div className="w-full h-full items-center justify-center text-nowrap border-b-2 border-white/20"/>
+                            <div className="w-full items-center justify-center text-nowrap ">
                                 <p className={`border-white/20 font-tags tracking-wider text-[26px] xl:text-[32px] font-light
                                 uppercase pt-2.5 pb-2.5 justify-center flex transition-all 
                                 bg-pink-20 border-l-2 border-t-2 border-b-0 border-r-2`}>
                                     {projectsNameLang[index]}
                                 </p>
                             </div> 
+                            <div className="w-full h-full items-center justify-center text-nowrap border-b-2 border-white/20"/>
                         </div>
 
                         <div className="container mx-auto pt-5 xl:pr-5 xl:pl-5">

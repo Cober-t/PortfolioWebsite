@@ -443,12 +443,12 @@ const experience = {
         positionEN: "Tools & IT",
         durationES: "Marzo 2023 - Abril 2024",
         durationEN: "March 2023 - April 2024",
-        descriptionES: "Durante mi estancia en Pendulo Studios aprendí a trabajar con un equipo grande \
+        descriptionES: "En Pendulo Studios aprendí a trabajar con un equipo grande \
         y a dar soporte a sistemas que forman parte de un flujo de trabajo complejo además \
         de analizarlos y mejorarlos para que fueran más fáciles de usar y desarrollar. \
         También mejoré mis habilidades como programador al desarrollar herramientas para Maya, \
         Blender, Unreal Engine o Unity, utilizando los lenguajes Python, C++ y C# respectivamente.",
-        descriptionEN : "Throughout my time at Pendulo Studios I learned how to work with a large team, \
+        descriptionEN : "At Pendulo Studios I learned how to work with a large team, \
         how to support systems that are part of a complex workflow and how to analyse and improve \
         these systems to make them easier to use and develop. I also improved my skills as a programmer \
         when making tools for Maya, Blender, Unreal Engine or Unity, using the languages \
@@ -463,8 +463,16 @@ const experience = {
         positionEN: "VFX & UI designer (internship)",
         durationES: "Febrero 2022 - Abril 2022",
         durationEN: "February 2022 - April 2022",
-        descriptionEN: "TODO",
-        descriptionES: "TODO",
+        descriptionEN: "Durante mis prácticas en empresa en FIRESCALE Studios \
+        me integraron en su flujo de trabajo en Unity, con el que pude pasar por todas \
+        las fases de integración de assets para la UI y VFX usando el sistema de partículas \
+        de Unity. Junto con el feedback del equipo, me dieron la oportunidad de producir assets \
+        listos para integrarloss al videojuego \"Rise of the Overlords\"",
+        descriptionES: "During my internship at FIRESCALE Studios I was integrated \
+        into their Unity workflow, with which I was able to go through all phases \
+        of asset integration for UI and VFX using Unity's particle system. \
+        Together with the feedback from the team, they allowed me to produce \
+        assets ready to be integrated into the video game \"Rise of the Overlords\".",
         image: "./riseOfTheOverlords.jpg",
         link: "https://store.steampowered.com/app/1162140/Rise_Of_The_Overlords/",
     },
@@ -472,7 +480,7 @@ const experience = {
         companyES: "La Tribuna de Toledo",
         companyEN: "La Tribuna of Toledo",
         positionES: "Maquetación",
-        positionEN: "TODO",
+        positionEN: "Layout",
         durationES: "Junio 2018 - Septiembre 2018",
         durationEN: "June 2018 - September 2018",
         descriptionEN: "",

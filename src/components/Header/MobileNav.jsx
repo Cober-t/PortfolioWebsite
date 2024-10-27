@@ -13,15 +13,6 @@ const Navbar = () => {
   const location = useLocation()
   const [toggle, setToggle] = useState(false);
 
-  function NavColor(path) {
-    let color = "text-white hover:text-accent"
-  
-    if (window.location.pathname === path)
-      color = "hover:text-darkOrange text-accent border-b-2 border-accent hover:border-darkOrange"
-    
-    return `${color} uppercase font-medium transition-all`
-  }
-
   return (
     <>
     <div className='xl:hidden fixed h-screen flex justify-end items-start z-40'>
@@ -66,7 +57,7 @@ const Navbar = () => {
                   index == 3 && "Contact"} 
                   text={lang == "ES" ? link.nameES : link.nameEN}
                   props={`hover:text-accent hover:border-darkOrange text-white/60
-                    text-[5vw] font-thin font-tags uppercase`}/>
+                    text-[7vw] md:text-[3.5vw] font-thin font-tags uppercase`}/>
             </li>
             ))}
           </div>
