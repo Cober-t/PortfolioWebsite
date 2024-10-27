@@ -11,8 +11,9 @@ const ExperienceWork = () => {
     return (
         <div className="w-full h-full mb-60">
             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl sm:text-5xl font-bold font-nodeTitle uppercase">{experience.title}</h3>
-                {/* <div className="h-[600px] xl:overflow-y-scroll scroll"></div> */}
+                <h3 className="text-xl sm:text-5xl font-bold font-nodeTitle uppercase">
+                    {lang == "ES" ? experience.titleES : experience.titleEN}
+                </h3>
                 <div className="">
                     <ul className="grid grid-cols-1 gap-[30px]">
                         {experience.items.map((item, index) => {

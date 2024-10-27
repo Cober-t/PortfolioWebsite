@@ -103,7 +103,7 @@ const projects = [
         {
             num: '2/8',
             titleES: "Configuración del proyecto y API para la ventana",
-            titleEN: "TODO",
+            titleEN: "Project configuration and API for the window",
             descriptionES: "Un conocimiento sólido en configuración de proyectos \
             facilitará enormemente añadir librerías y la correcta compilación en \
             diferentes entornos. Es importante también la programación de una capa \
@@ -152,7 +152,7 @@ const projects = [
         {
             num: '5/8',
             titleES: "API para los gráficos",
-            titleEN: "TODO",
+            titleEN: "API for the graphics",
             descriptionES: "Al igual que sucede con la ventana, es importante crear una capa que nos permita \
             mostrar gráficos en ella. Cada sistema operativo gestiona los gráficos de diferente forma, pero el motor \
             debe estar preparado para que no sea difícil añadir más capacidades gráficas en un futuro. \
@@ -210,7 +210,7 @@ const projects = [
         {
             num: '8/8',
             titleES: "Launcher para el motor y proyectos",
-            titleEN: "TODO",
+            titleEN: "Launcher for engine and projects",
             descriptionES: "Al igual que otros populares motores de videojuegos, un launcher visual facilita la interacción \
             con el motor, sus posibles versiones y la creación y edición de proyectos en desarrollo",
             descriptionEN: "Like other popular game engines, a visual launcher facilitates interaction \
@@ -290,7 +290,7 @@ const projects = [
         {
             num: '1/4',
             titleES: "Validador de modelos y animaciones para importar a Unreal Engine",
-            titleEN: "TODO",
+            titleEN: "Model and animation validator for importing to Unreal Engine",
             descriptionES: "Durante mi estancia en Pendulo Studios trabajé en herramientas encargadas de comprobar \
             que los modelos y animaciones provenientes del equipo de arte cumplieran los requisitos necesarios para su correcta \
             exportación al motor Unreal Engine. Con el desarrollo de plugins internos se consigue validar todo tipo de condiciones que deben \
@@ -316,10 +316,10 @@ const projects = [
         {
             num: '2/4',
             titleES: "Validador de nomenclaturas",
-            titleEN: "TODO",
+            titleEN: "Nomenclature Validator",
             descriptionES: "En grandes proyectos donde los archivos y las carpetas se cuentan por miles, es importante mantenerlos organizados \
             y con una nomenclatura precisa. Esta herramienta comprueba muy rápidamente y con una respuesta clara los posibles archivos \
-            que no cumplan con la nomenclatura exigida y su ruta. Esta guía de nomenclatura es fácilmente modificable a través de un json, \
+            que no cumplan con la nomenclatura exigida y su ruta. Esta guía de nomenclatura es fácilmente modificable a través de un JSON, \
             lo que permite introducir estas reglas, diferenciándose por cada nivel de sub carpeta e incluso para cada tipo de archivo dentro de estas.",
             descriptionEN: "In large projects where files and folders number in the thousands, \
             it is important to keep them organized and with an accurate nomenclature. \
@@ -328,8 +328,8 @@ const projects = [
             This nomenclature guide is easily modifiable through a JSON, which allows you to \
             enter these rules, differentiating for each sub-folder level and even for each type of \
             file within them.",
-            stackES: [{name: "Expresiones regulares (regex)"}, {name: "Json"}],
-            stackEN: [{name: "Expresiones regulares (regex)"}, {name: "Json"}],
+            stackES: [{name: "Expresiones regulares (regex)"}, {name: "JSON"}],
+            stackEN: [{name: "Regular Expressions (regex)"}, {name: "JSON"}],
             image: "/python/validadorNomenclaturas.png",
             icon: undefined,
             github: undefined,
@@ -337,7 +337,7 @@ const projects = [
         {
             num: '3/4',
             titleES: "Gestión de Apps a través de Telegram",
-            titleEN: "TODO",
+            titleEN: "App management through Telegram",
             descriptionES: "Herramienta que gestiona todas las aplicaciones que uso en mi vida diaria. Haciendo uso de una Raspberry Pi y un bot de Telegram \
             se ejecuta todo el tiempo un código que recibe e interpreta los mensajes que mandemos a este bot. A través de comandos determinados \
             se crean, modifican o eliminan tareas en Todoist. En Notion podemos gestionar bases de datos como listas de la compra, gastos o multimedia, \
@@ -362,10 +362,10 @@ const projects = [
         {
             num: '4/4',
             titleES: "Launcher para proyectos del motor de videojuegos",
-            titleEN: "TODO",
-            descriptionES: "Herramienta de gestión de los proyectos y versiones de mi propio motor de videojuegos. Con la ayuda de un archivo json fácilmente editable \
+            titleEN: "Launcher for game engine projects",
+            descriptionES: "Herramienta de gestión de los proyectos y versiones de mi propio motor de videojuegos. Con la ayuda de un archivo JSON fácilmente editable \
             el launcher lee toda la carpeta de proyectos con miniaturas incluidas y, gracias a Qt, nos lo muestra todo visualmente. Al crear un nuevo proyecto no solo \
-            actualiza el json sino que también prepara todo el entorno de desarrollo, crea las carpetas y archivos con el código necesario poder trabajar con el motor \
+            actualiza el JSON sino que también prepara todo el entorno de desarrollo, crea las carpetas y archivos con el código necesario poder trabajar con el motor \
             nada más se haya abierto, al igual que funcionan otros populares motores como Unreal Engine, Unity o Godot.",
             descriptionEN: "Tool for managing the projects and versions of my own videogame engine. \
             With the help of an easily editable JSON file the launcher reads the whole project folder \
@@ -385,6 +385,7 @@ const projects = [
         {
             num: '1/2',
             titleES: "Generador de terreno aleatorio",
+            titleEN: "Random terrain generator",
             descriptionES: "Haciendo uso del algoritmo 'Perlin Noise' se desarrolló este generador de terreno para juegos \
             del tipo RTS (Real-Time Strategy). A través de la interfaz de Unity se pueden modificar todas las variables \
             de este algoritmo y generar un terreno con un solo click pudiendo ver el resultado rápidamente en tiempo real. \
@@ -485,7 +486,8 @@ const experience = {
 const education = {
 
     icon: "",
-    title: "Mis Estudios",
+    titleES: "Mis Estudios",
+    titleEN: "My Studies",
     description: "",
     items: [
     {

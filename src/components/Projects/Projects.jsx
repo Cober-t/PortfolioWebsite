@@ -32,10 +32,16 @@ const Projects = () => {
         {id: 1, value: 100/projects[1].length},
         {id: 2, value: 100/projects[2].length}
     ])
+    const [slideIndex, setSlideIndex] = useState([
+        {id: 0, value: 0},
+        {id: 1, value: 0},
+        {id: 2, value: 0}
+    ])
     const [swiper, setSwiper] = useState(projects[0].length, null)
 
     function updateProgress({ idToUpdate, newData }) 
     {
+        updateLastProgress(idToUpdate, newData)
         setProgress(progress.map(({ id, value }) =>
             id === idToUpdate ? { id, value: newData } : { id, value }))
     }
@@ -44,10 +50,16 @@ const Projects = () => {
         setLastProgressValue(lastProgressValue.map(({ id, value }) =>
             id === idToUpdate ? { id, value: newData } : { id, value }))
     }
+    function updateSlide({ projectID, slideID }) 
+    {
+        setSlideIndex(slideIndex.map(({ id, value }) =>
+            id === projectID ? { id, value: slideID } : { id, value }))
+    }
     const handleSlideChange = (swiper, index) => {
         const projectSize = projects[index].length
+        updateSlide({projectID: index, slideID: swiper.activeIndex})
         updateProgress({
-            idToUpdate:progress[index].id, 
+            idToUpdate: index, 
             newData: 100 / projectSize * swiper.activeIndex + 100 / projectSize
         })
     }
@@ -88,22 +100,22 @@ const Projects = () => {
                                         {/* outline num */}
                                         <div className="text-[76px] sm:text-8xl relative w-fit font-['Ignite']
                                         text-stroke transition-all duration-300">
-                                            {projectAux[0].num}
+                                            {projectAux[slideIndex.at(index).value].num}
                                             <span aria-hidden="true" 
                                             className="text-outline left-0 absolute text-backgroundColor font-['Ignite']">
-                                                {projectAux[0].num}
+                                                {projectAux[slideIndex.at(index).value].num}
                                             </span>
                                         </div>
 
                                         {/* project category */}
                                         <h2 className="text-[48px] sm:text-[62px] font-tags font-bold leading-none text-white
                                         hover:text-accent transition-all duration-300">
-                                            {lang == "ES" ? projectAux[0].titleES : projectAux[0].titleEN}
+                                            {lang == "ES" ? projectAux[slideIndex.at(index).value].titleES : projectAux[slideIndex.at(index).value].titleEN}
                                         </h2>
                                         {/* project description */}
                                         <p className="text-white/60 text-[14px] sm:text-[16px] text-left font-nodeDescription
                                         whitespace-pre-line">
-                                            {lang == "ES" ? projectAux[0].descriptionES : projectAux[0].descriptionEN}
+                                            {lang == "ES" ? projectAux[slideIndex.at(index).value].descriptionES : projectAux[slideIndex.at(index).value].descriptionEN}
                                         </p>
                                         {/* stack */}
                                         <ul className="flex gap-4">

@@ -10,7 +10,9 @@ const Education = () => {
     return (
         <div className="w-full mb-20">
             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl xl:text-5xl font-bold font-nodeTitle uppercase">{education.title}</h3>
+                <h3 className="text-5xl xl:text-5xl font-bold font-nodeTitle uppercase">
+                    {lang == "ES" ? education.titleES : education.titleEN}
+                </h3>
                 <div className="h-fit">
                     <ul className="grid grid-cols-1 gap-[30px]">
                         {education.items.map((item, index) => {

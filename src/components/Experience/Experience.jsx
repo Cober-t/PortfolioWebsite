@@ -1,7 +1,7 @@
 import MotionTranstion from "../MotionTransition.jsx"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import { tabsEN, tabsES } from "../../constants.jsx"
+import { experience, tabsEN, tabsES } from "../../constants.jsx"
 
 import Skills from "../Experience/Skills.jsx"
 import AboutMe from "../Experience/AboutMe.jsx"
